@@ -27,3 +27,5 @@
     - Authorization
         - Users can now only edit/delete comments that user created
         - Fixed edit and delete buttons to hide/show properly
+* refactored Middleware
+    - created new middleware directory, combined into new file middleware/index.js
