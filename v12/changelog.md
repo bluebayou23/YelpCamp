@@ -8,3 +8,4 @@
 
 2020.08.31
 * Installed moment.js to display lasped time since creation of a campground/comment
+* Created ADMIN role and updated corresponding user capabilities

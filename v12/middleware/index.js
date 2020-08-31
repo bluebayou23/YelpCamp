@@ -12,7 +12,7 @@ middlewareObj.checkOwnership = (req, res, next) => {
             } else {
                 // does that user own campground?
                 // .equals() is a Mongoose method
-                if(foundCampground.author.id.equals(req.user._id)){
+                if(foundCampground.author.id.equals(req.user._id) || req.user.isAdmin){
                     next();
                 } else {
                     // if not, redirect
@@ -37,7 +37,7 @@ middlewareObj.checkCommentOwnership = (req, res, next) => {
             } else {
                 // does that user own comment?
                 // .equals() is a Mongoose method
-                if(foundComment.author.id.equals(req.user._id)){
+                if(foundComment.author.id.equals(req.user._id) || req.user.isAdmin){
                     next();
                 } else {
                     // if not, redirect
